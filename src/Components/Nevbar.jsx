@@ -2,6 +2,7 @@ import { useState } from "react";
 import logoImg from "../Images/logo.jpg";
 import { FaInstagram, FaBars, FaTimes } from "react-icons/fa";
 import { CiFacebook } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,28 +26,27 @@ function Navbar() {
       <nav className={menuOpen ? "mobile_version" : "menu"}>
         <ul>
           <li>
-            <a href="/" onClick={closeMenu}>
+            <Link to="/" onClick={closeMenu}>
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/about" onClick={closeMenu}>
+            <Link to="/about" onClick={closeMenu}>
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/contact" onClick={closeMenu}>
+            <Link to="/contact" onClick={closeMenu}>
               Contact
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/gallery" onClick={closeMenu}>
+            <Link to="/gallary" onClick={closeMenu}>
               Gallery
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
-
       {/* Social Icons (desktop only) */}
       <div className="socialContact">
         <ul>
