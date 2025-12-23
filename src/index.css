@@ -366,7 +366,7 @@
 .contact_form input,
 .contact_form textarea {
   width: 100%;
-  margin-bottom: 20px;
+  margin-top: 20px;
   padding: 14px;
   font-size: 16px;
   border-radius: 8px;
@@ -385,6 +385,10 @@
   border-color: #ff4d6d;
 }
 
+.error{
+  color: red;
+}
+
 .contact_form button {
   width: 100%;
   padding: 14px;
@@ -395,6 +399,7 @@
   font-size: 18px;
   cursor: pointer;
   transition: 0.3s;
+  margin-top: 20px;
 }
 
 .contact_form button:hover {
