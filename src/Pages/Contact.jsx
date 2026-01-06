@@ -78,7 +78,7 @@ function Contact() {
           name="Name"
           value={formData.Name}
           onChange={handelOnChange}
-          disabled={submissionStatus == "Submitting"}
+          disabled={submissionStatus === "Submitting"}
         />
         {errors.Name && <p className="error">{errors.Name}</p>}
         <input
@@ -87,7 +87,7 @@ function Contact() {
           name="email"
           value={formData.email}
           onChange={handelOnChange}
-          disabled={submissionStatus == "Submitting"}
+          disabled={submissionStatus === "Submitting"}
         />
         {errors.email && <p className="error">{errors.email}</p>}
         <textarea
@@ -95,11 +95,11 @@ function Contact() {
           name="message"
           value={formData.message}
           onChange={handelOnChange}
-          disabled={submissionStatus == "Submitting"}
+          disabled={submissionStatus === "Submitting"}
         ></textarea>
         {errors.message && <p className="error">{errors.message}</p>}
-        <button type="submit" disabled={submissionStatus == "Submitting"}>
-          {submissionStatus == "Submitting" ? "Sending" : "Send Message"}
+        <button type="submit" disabled={submissionStatus === "Submitting"}>
+          {submissionStatus === "Submitting" ? "Sending" : "Send Message"}
         </button>
       </form>
     </div>

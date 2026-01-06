@@ -1,6 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 function Footer() {
+  const navigate = useNavigate();
+
+  const goToSection = (path, id) => {
+    navigate(path);
+
+    setTimeout(() => {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 300);
+  };
+
   return (
     <footer className="footer">
       <div className="footer_container">
@@ -11,22 +25,14 @@ function Footer() {
             home.
           </p>
         </div>
-
+        
         <div className="footer_links">
           <h3>Quick Links</h3>
           <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/gallary">Gallery</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
+            <li onClick={() => goToSection("/", "home")}>Home</li>
+            <li onClick={() => goToSection("/about", "about")}>About</li>
+            <li onClick={() => goToSection("/gallary", "gallary")}>Gallery</li>
+            <li onClick={() => goToSection("/contact", "contact")}>Contact</li>
           </ul>
         </div>
 
@@ -35,6 +41,7 @@ function Footer() {
           <p>Email: example@gmail.com</p>
           <p>Phone: +91 98765 43210</p>
         </div>
+
       </div>
 
       <div className="footer_bottom">

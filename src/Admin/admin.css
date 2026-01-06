@@ -1,0 +1,58 @@
+.admin_container {
+  padding: 40px;
+  background: #f4f6f8;
+  min-height: 100vh;
+}
+
+.admin_form {
+  max-width: 400px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+
+.admin_form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.admin_form button {
+  width: 100%;
+  padding: 10px;
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.admin_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.admin_card {
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.admin_actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.admin_actions button {
+  padding: 6px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.admin_actions .delete {
+  background: crimson;
+  color: white;
+}

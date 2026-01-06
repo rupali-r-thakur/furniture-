@@ -14,6 +14,12 @@ function About() {
           deleniti harum sint quae, consectetur, molestias dolore alias soluta
           accusamus sunt?
         </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, commodi
+          est. Natus numquam assumenda ipsum quas, explicabo ullam facere
+          deleniti harum sint quae, consectetur, molestias dolore alias soluta
+          accusamus sunt?
+        </p>
       </div>
     </div>
   );
