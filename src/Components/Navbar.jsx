@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logoImg from "../Images/logo.jpg";
+import logoImg from "../Images/logo.png";
 import { FaInstagram, FaBars, FaTimes } from "react-icons/fa";
 import { CiFacebook } from "react-icons/ci";
 import { Link, useNavigate, useLocation } from "react-router-dom";
@@ -86,7 +86,15 @@ function Navbar() {
     <header className="main_container">
       <div className="logo" onClick={() => navigate("/")}>
         <img src={logoImg} alt="Website Logo" />
+        <div className="logo_text">
+          <h1>
+            N<span className="highlight">est</span>C
+            <span className="highlight">reative</span>
+          </h1>
+          <p>INTERIOR DESIGNING</p>
+        </div>
       </div>
+
       {!isAdminPage && (
         <div className="hamburger" onClick={toggleMenu}>
           {menuOpen ? <FaTimes /> : <FaBars />}
@@ -95,12 +103,23 @@ function Navbar() {
       {!isAdminPage && (
         <nav className={menuOpen ? "mobile_version" : "menu"}>
           <ul>
-            <li><Link onClick={() => goToSection("/", "home")}>Home</Link></li>
-            <li><Link onClick={() => goToSection("/about", "about")}>About</Link></li>
-            <li><Link onClick={() => goToSection("/gallery", "gallery")}>Gallery</Link></li>
-            <li><Link onClick={() => goToSection("/contact", "contact")}>Contact</Link></li>
+            <li>
+              <Link onClick={() => goToSection("/", "home")}>Home</Link>
+            </li>
+            <li>
+              <Link onClick={() => goToSection("/about", "about")}>About</Link>
+            </li>
+            <li>
+              <Link onClick={() => goToSection("/gallery", "gallery")}>
+                Gallery
+              </Link>
+            </li>
+            <li>
+              <Link onClick={() => goToSection("/contact", "contact")}>
+                Contact
+              </Link>
+            </li>
 
-           
             <li className="user_wrapper">
               {currentUser ? (
                 <div className="user_menu">
@@ -147,8 +166,12 @@ function Navbar() {
       {!isAdminPage && (
         <div className="socialContact">
           <ul>
-            <li><FaInstagram /></li>
-            <li><CiFacebook /></li>
+            <li>
+              <FaInstagram />
+            </li>
+            <li>
+              <CiFacebook />
+            </li>
           </ul>
         </div>
       )}
